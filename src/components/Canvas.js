@@ -86,6 +86,7 @@ export default class Canvas extends React.Component {
       Transform.renderImage(ctx, image, position, scaledRect);
       setTimeout (() => {
         let img = new Image();
+        img.setAttribute('crossOrigin', 'anonymous');
         img.src = canvas.toDataURL("image/png");
         this.cache = img;
       }, 100);
@@ -125,4 +126,3 @@ export default class Canvas extends React.Component {
   }
 
 }
-
